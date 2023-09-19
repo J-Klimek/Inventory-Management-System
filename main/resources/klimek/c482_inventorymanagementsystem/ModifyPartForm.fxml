@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="684.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="klimek.c482_inventorymanagementsystem.ModifyPartController">
+    <children>
+        <Label fx:id="modifyPartLbl" layoutX="66.0" layoutY="86.0" prefHeight="17.0" prefWidth="70.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="inHouseBtn" layoutX="187.0" layoutY="86.0" mnemonicParsing="false" onAction="#OnActionSelectInHouse" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="sourceTG" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="outsourcedBtn" layoutX="294.0" layoutY="86.0" mnemonicParsing="false" onAction="#onActionSelectOutsourced" text="Outsourced" toggleGroup="$sourceTG" />
+        <TextField fx:id="partIDTxt" disable="true" editable="false" layoutX="150.0" layoutY="165.0" prefHeight="24.0" prefWidth="149.0" promptText="Auto Generated - Disabled">
+            <font>
+                <Font name="System Italic" size="11.0" />
+            </font>
+        </TextField>
+        <Label fx:id="partIDLbl" layoutX="51.0" layoutY="169.0" prefHeight="17.0" prefWidth="103.0" style="-fx-background-color: none;" text="ID" />
+        <TextField fx:id="partNameTxt" layoutX="150.0" layoutY="202.0" />
+        <Label fx:id="partNameLbl" layoutX="51.0" layoutY="206.0" prefHeight="17.0" prefWidth="103.0" style="-fx-background-color: none;" text="Name" />
+        <TextField fx:id="partCurrInventoryTxt" layoutX="150.0" layoutY="238.0" />
+        <Label fx:id="partInventoryLbl" layoutX="51.0" layoutY="242.0" prefHeight="17.0" prefWidth="103.0" style="-fx-background-color: none;" text="Inventory" />
+        <TextField fx:id="partCostTxt" layoutX="150.0" layoutY="272.0" />
+        <Label fx:id="partCostLbl" layoutX="51.0" layoutY="276.0" prefHeight="17.0" prefWidth="103.0" style="-fx-background-color: none;" text="Price/Cost" />
+        <TextField fx:id="partInvMaxTxt" layoutX="150.0" layoutY="307.0" />
+        <Label fx:id="partInvMaxLbl" layoutX="51.0" layoutY="311.0" prefHeight="17.0" prefWidth="103.0" style="-fx-background-color: none;" text="Inventory Max" />
+        <TextField fx:id="partMachineIDTxt" layoutX="150.0" layoutY="342.0" />
+        <Label fx:id="partMachineIDLbl" layoutX="51.0" layoutY="346.0" prefHeight="17.0" prefWidth="103.0" style="-fx-background-color: none;" text="Machine ID" />
+      <Label fx:id="partInvMinLbl" layoutX="334.0" layoutY="311.0" prefHeight="17.0" prefWidth="103.0" text="Inventory Min" />
+      <TextField fx:id="partInvMinTxt" layoutX="424.0" layoutY="307.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="334.0" layoutY="432.0" mnemonicParsing="false" onAction="#onActionSavePartModify" text="Save" />
+      <Button layoutX="411.0" layoutY="432.0" mnemonicParsing="false" onAction="#onActionCancelPartModify" text="Cancel" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="klimek.c482_inventorymanagementsystem.ModifyProductController">
+    <children>
+        <Label fx:id="modifyProductLbl" layoutX="49.0" layoutY="42.0" prefHeight="17.0" prefWidth="90.0" text="Modify Product">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="searchPartTxt" layoutX="643.0" layoutY="17.0" onAction="#OnActionSearchPart" prefHeight="25.0" prefWidth="164.0" promptText="Search by Part ID or Name" />
+        <TextField fx:id="productIDTxt" disable="true" editable="false" layoutX="107.0" layoutY="144.0" prefHeight="24.0" prefWidth="149.0" promptText="Auto Generated - Disabled">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font></TextField>
+        <Label fx:id="productIDLbl" layoutX="38.0" layoutY="148.0" prefHeight="17.0" prefWidth="90.0" text="ID" />
+        <TextField fx:id="productNameTxt" layoutX="107.0" layoutY="183.0" />
+        <Label fx:id="productNameLbl" layoutX="38.0" layoutY="187.0" prefHeight="17.0" prefWidth="90.0" text="Name" />
+        <TextField fx:id="productInvMaxTxt" layoutX="107.0" layoutY="296.0" prefHeight="25.0" prefWidth="90.0" />
+        <Label fx:id="productInvMaxLbl" layoutX="38.0" layoutY="300.0" prefHeight="17.0" prefWidth="90.0" text="Max" />
+        <TextField fx:id="productPriceTxt" layoutX="107.0" layoutY="259.0" prefHeight="25.0" prefWidth="90.0" />
+        <Label fx:id="productPriceLbl" layoutX="38.0" layoutY="263.0" prefHeight="17.0" prefWidth="90.0" text="Price" />
+        <TextField fx:id="productInventoryTxt" layoutX="107.0" layoutY="221.0" prefHeight="25.0" prefWidth="90.0" />
+        <Label fx:id="productInventoryLbl" layoutX="38.0" layoutY="225.0" prefHeight="17.0" prefWidth="90.0" text="Inventory" />
+        <TextField fx:id="productInvMinTxt" layoutX="264.0" layoutY="296.0" prefHeight="25.0" prefWidth="90.0" />
+        <Label fx:id="productInvMinLbl" layoutX="225.0" layoutY="300.0" prefHeight="17.0" prefWidth="52.0" text="Min" />
+        <Button layoutX="707.0" layoutY="240.0" mnemonicParsing="false" onAction="#onActionModifyPartAssocAdd" text="Add" />
+        <TableView fx:id="modProductTopTableView" layoutX="414.0" layoutY="62.0" prefHeight="144.0" prefWidth="392.0">
+            <columns>
+                <TableColumn fx:id="partIDCol" prefWidth="64.0" text="Part ID" />
+                <TableColumn fx:id="partNameCol" prefWidth="106.0" text="Part Name" />
+                <TableColumn fx:id="partInventoryCol" prefWidth="97.0" text="Inventory Level" />
+                <TableColumn fx:id="partCostCol" prefWidth="124.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="modProdPartsTableView" layoutX="414.0" layoutY="300.0" prefHeight="144.0" prefWidth="392.0">
+            <columns>
+                <TableColumn fx:id="partAssocIDCol" prefWidth="66.0" text="Part ID" />
+                <TableColumn fx:id="partAssocNameCol" prefWidth="109.0" text="Part Name" />
+                <TableColumn fx:id="partAssocInventoryCol" prefWidth="98.0" text="Inventory Level" />
+                <TableColumn fx:id="partAssocCostCol" prefWidth="118.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <Button layoutX="645.0" layoutY="467.0" mnemonicParsing="false" onAction="#onActionModifyPartAssocRemove" text="Remove Associated Part" />
+        <Button layoutX="645.0" layoutY="504.0" mnemonicParsing="false" onAction="#onActionModifyProductSave" text="Save" />
+        <Button layoutX="737.0" layoutY="504.0" mnemonicParsing="false" onAction="#onActionModifyProductCancel" text="Cancel" />
+
+    </children>
+</AnchorPane>

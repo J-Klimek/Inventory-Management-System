@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"klimek.c482_inventorymanagementsystem","l":"klimek.c482_inventorymanagementsystem"},{"m":"klimek.c482_inventorymanagementsystem","l":"klimek.c482_inventorymanagementsystem.model"}];updateSearchResults();
